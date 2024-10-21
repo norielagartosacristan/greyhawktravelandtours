@@ -1,43 +1,12 @@
+<?php include "header.php"; ?>
+
 <?php
-require 'db_connection.php';
+require 'includes/dbh.inc.php';
 
 // Fetch a few featured tour packages to display on the home page
 $query = "SELECT * FROM Tour_Packages LIMIT 3"; // You can change the limit based on how many you want to show
 $result = mysqli_query($conn, $query);
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Greyhawk Travel and Tours</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-</head>
-<body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Greyhawk Travel and Tours</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.php">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="tour_packages.php">Tour Packages</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#booking">Flight & Hotel Booking</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact Us</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
 
     <!-- Banner Section -->
     <div class="jumbotron jumbotron-fluid text-white bg-primary">
@@ -98,14 +67,4 @@ $result = mysqli_query($conn, $query);
         </form>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2024 Greyhawk Travel and Tours | Designed with care.</p>
-    </footer>
-
-    <!-- Bootstrap and JS Scripts -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-</body>
-</html>
+<?php include "footer.php"; ?>
