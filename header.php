@@ -24,7 +24,7 @@
                     <a class="nav-link" href="tour_packages.php">Tour Packages</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#booking">Flight & Hotel Booking</a>
+                    <a class="nav-link" href="flight_hotels.php">Flight & Hotel Booking</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="contact_us.php">Contact Us</a>
