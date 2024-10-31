@@ -3,7 +3,7 @@
 $servername = "localhost"; // Usually 'localhost'
 $username = "root"; // Your MySQL username
 $password = ""; // Your MySQL password
-$dbname = "travel_and_tours_db"; // Name of the database to create
+$dbname = "greyhawk_traveland_tours_db"; // Name of the database to create
 
 // Create connection
 $conn = new mysqli($servername, $username, $password);
@@ -29,6 +29,7 @@ $sql = "CREATE TABLE IF NOT EXISTS tour_packages (
     id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     package_name VARCHAR(255) NOT NULL,
     description TEXT NOT NULL,
+    image VARCHAR(255) NOT NULL,
     price DECIMAL(10, 2) NOT NULL,
     duration VARCHAR(50) NOT NULL,
     departure_date DATE,
