@@ -3,39 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Tour Package</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Add New Tour Package</title>
 </head>
 <body>
-    <div class="container mt-5">
-        <h2>Add New Tour Package</h2>
-        <form action="includes/upload.inc.php" method="POST" enctype="multipart/form-data">
-            <div class="form-group">
-                <label for="title">Tour Title</label>
-                <input type="text" name="title" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="description">Description</label>
-                <textarea name="description" class="form-control" rows="5" required></textarea>
-            </div>
-            <div class="form-group">
-                <label for="price">Price</label>
-                <input type="number" step="0.01" name="price" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="duration">Duration (e.g. 5 days, 7 nights)</label>
-                <input type="text" name="duration" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="destination">Destination</label>
-                <input type="text" name="destination" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="image">Tour Image</label>
-                <input type="file" name="image" class="form-control" required>
-            </div>
-            <button type="submit" name="submit" class="btn btn-primary">Add Tour Package</button>
-        </form>
-    </div>
+    <h2>Add a New Tour Package</h2>
+    <form action="includes/upload.inc.php" method="post" enctype="multipart/form-data">
+        <label for="package_name">Package Name:</label>
+        <input type="text" id="package_name" name="package_name" required><br><br>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea><br><br>
+
+        <label for="image">Upload Image:</label>
+        <input type="file" id="image" name="image" required><br><br>
+
+        <label for="price">Price:</label>
+        <input type="number" step="0.01" id="price" name="price" required><br><br>
+
+        <label for="duration">Duration:</label>
+        <input type="text" id="duration" name="duration" required><br><br>
+
+        <label for="departure_date">Departure Date:</label>
+        <input type="date" id="departure_date" name="departure_date"><br><br>
+
+        <input type="submit" value="Add Tour Package">
+    </form>
 </body>
 </html>

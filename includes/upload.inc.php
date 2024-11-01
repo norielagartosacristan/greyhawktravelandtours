@@ -1,9 +1,9 @@
 <?php
-// Database connection details
+// MySQL connection settings
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "greyhawk_traveland_tours_db";
+$dbname = "greyhawk_travel_and_tours_db";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -13,20 +13,21 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Check if the form was submitted
-if (isset($_POST['submit'])) {
-    // Retrieve package information
-    $package_name = $conn->real_escape_string($_POST['package_name']);
-    $description = $conn->real_escape_string($_POST['description']);
-    $price = $conn->real_escape_string($_POST['price']);
+// Process form submission
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $package_name = $_POST["package_name"];
+    $description = $_POST["description"];
+    $price = $_POST["price"];
+    $duration = $_POST["duration"];
+    $departure_date = $_POST["departure_date"];
 
     // Handle image upload
     $target_dir = "uploads/";
     $target_file = $target_dir . basename($_FILES["image"]["name"]);
-    $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
     $uploadOk = 1;
+    $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
-    // Check if image file is a real image or fake image
+    // Check if image file is a actual image or fake image
     $check = getimagesize($_FILES["image"]["tmp_name"]);
     if ($check !== false) {
         $uploadOk = 1;
@@ -35,19 +36,13 @@ if (isset($_POST['submit'])) {
         $uploadOk = 0;
     }
 
-    // Check if file already exists
-    if (file_exists($target_file)) {
-        echo "Sorry, file already exists.";
-        $uploadOk = 0;
-    }
-
-    // Check file size (limit to 5MB)
-    if ($_FILES["image"]["size"] > 5000000) {
+    // Check file size (limit to 2MB)
+    if ($_FILES["image"]["size"] > 2000000) {
         echo "Sorry, your file is too large.";
         $uploadOk = 0;
     }
 
-    // Allow certain file formats
+    // Allow only certain file formats
     if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
         echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
         $uploadOk = 0;
@@ -57,13 +52,14 @@ if (isset($_POST['submit'])) {
     if ($uploadOk == 0) {
         echo "Sorry, your file was not uploaded.";
     } else {
-        // Try to upload file
+        // If everything is ok, try to upload file
         if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-            // Insert the package info and image into the database
-            $sql = "INSERT INTO tour_packages (package_name, description, price, image) VALUES ('$package_name', '$description', '$price', '$target_file')";
+            // Insert data into tour_packages table
+            $sql = "INSERT INTO tour_packages (package_name, description, image, price, duration, departure_date)
+                    VALUES ('$package_name', '$description', '$target_file', '$price', '$duration', '$departure_date')";
 
             if ($conn->query($sql) === TRUE) {
-                echo "The package has been uploaded successfully.";
+                echo "New tour package added successfully!";
             } else {
                 echo "Error: " . $sql . "<br>" . $conn->error;
             }

@@ -37,18 +37,42 @@ $result = mysqli_query($conn, $query);
         </div>
     </div>
 
-    <div class="popular-destination">
-        <h1>Popular Destinations</h1>
-        <div class="cards">
-            <div class="card">
-                <div class="image">
+    <section class="popular-destinations">
+            <h2>Popular Destinations</h2>
+            <div class="destinations-grid">
+                <div class="destination-card">
                     <img src="" alt="">
+                    <div class="card-content">
+                        <h3 class="card-title">Palawan</h3>
+                        <p class="card-description">Explore the beautiful landscape of palawan</p>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <p>Palawan Tour</p>
+
+                <div class="destination-card">
+                    <img src="" alt="">
+                    <div class="card-content">
+                        <h3 class="card-title">Palawan</h3>
+                        <p class="card-description">Explore the beautiful landscape of palawan</p>
+                    </div>
                 </div>
+
+                <div class="destination-card">
+                    <img src="" alt="">
+                    <div class="card-content">
+                        <h3 class="card-title">Palawan</h3>
+                        <p class="card-description">Explore the beautiful landscape of palawan</p>
+                    </div>
+                </div>
+
+                <div class="destination-card">
+                    <img src="" alt="">
+                    <div class="card-content">
+                        <h3 class="card-title">Palawan</h3>
+                        <p class="card-description">Explore the beautiful landscape of palawan</p>
+                    </div>
+                </div>
+                
             </div>
-        </div>
-    </div>
+    </section>
 
 <?php include "footer.php"; ?>

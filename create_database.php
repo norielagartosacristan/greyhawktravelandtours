@@ -3,7 +3,7 @@
 $servername = "localhost"; // Usually 'localhost'
 $username = "root"; // Your MySQL username
 $password = ""; // Your MySQL password
-$dbname = "greyhawk_traveland_tours_db"; // Name of the database to create
+$dbname = "greyhawk_travel_and_tours_db"; // Name of the database to create
 
 // Create connection
 $conn = new mysqli($servername, $username, $password);
