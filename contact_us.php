@@ -20,15 +20,6 @@
             <button type="submit" name="submit" class="btn btn-primary">Send Message</button>
         </form>
     </div>
-    <div id="newsletter" class="container mt-5 mb-5">
-        <h2 class="text-center">Subscribe to Our Newsletter</h2>
-        <form action="includes/subscribe.inc.php" method="POST">
-            <div class="form-group">
-                <label for="">Your Email Address</label>
-                <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Subscribe</button>
-        </form>
-    </div>
+   
 
 <?php include "footer.php";?>

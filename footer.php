@@ -19,7 +19,7 @@
             <div id="newsletter" class="container mt-5 mb-5">
             <form action="includes/subscribe.inc.php" method="POST">
                 <div class="form-group">
-                    <label for="">Subscribe to Our News Letter</label>
+                    <label class="subscribe" for="">Subscribe to Our News Letter</label>
                     <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
                 </div>
                 <button type="submit" class="btn btn-primary">Subscribe</button>
@@ -37,7 +37,7 @@
             <h3>Contact Info</h3>
             <p>Greyhawk Travel and Tours</p>
             <p>Email: info@greyhawktravel.com</p>
-            <p>Phone: +63 9065756906</p>
+            <p>Phone: +63 9705902154</p>
             <p>Address: Godofredo Reyes Sr., Ragay, Camarines Sur</p>
         </div>
     </div>
