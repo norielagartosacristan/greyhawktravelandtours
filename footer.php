@@ -16,6 +16,15 @@
 
         <!-- Center Column: Social Media Icons -->
         <div class="footer-column social-media">
+            <div id="newsletter" class="container mt-5 mb-5">
+            <form action="includes/subscribe.inc.php" method="POST">
+                <div class="form-group">
+                    <label for="">Subscribe to Our News Letter</label>
+                    <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+            </div>
             <h3>Follow Us</h3>
             <a href="https://www.facebook.com/greyhawktravelandtours"><i class="fab fa-facebook-f"></i></a>
             <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>

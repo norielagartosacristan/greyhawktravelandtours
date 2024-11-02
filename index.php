@@ -51,7 +51,7 @@ $result = mysqli_query($conn, $query);
                 <div class="destination-card">
                     <img src="" alt="">
                     <div class="card-content">
-                        <h3 class="card-title">Palawan</h3>
+                        <h3 class="card-title">Bohol</h3>
                         <p class="card-description">Explore the beautiful landscape of palawan</p>
                     </div>
                 </div>
@@ -59,7 +59,7 @@ $result = mysqli_query($conn, $query);
                 <div class="destination-card">
                     <img src="" alt="">
                     <div class="card-content">
-                        <h3 class="card-title">Palawan</h3>
+                        <h3 class="card-title">Cebu</h3>
                         <p class="card-description">Explore the beautiful landscape of palawan</p>
                     </div>
                 </div>
@@ -67,7 +67,7 @@ $result = mysqli_query($conn, $query);
                 <div class="destination-card">
                     <img src="" alt="">
                     <div class="card-content">
-                        <h3 class="card-title">Palawan</h3>
+                        <h3 class="card-title">Legazpi</h3>
                         <p class="card-description">Explore the beautiful landscape of palawan</p>
                     </div>
                 </div>
