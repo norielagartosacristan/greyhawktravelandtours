@@ -2,7 +2,7 @@
 $host = 'localhost'; // Database host
 $user = 'root'; // Database user
 $password = ''; // Database password
-$dbname = 'greyhawk_travel_and_tours_db'; // Database name
+$dbname = 'travel_and_tours_db'; // Database name
 
 // Create connection
 $conn = mysqli_connect($host, $user, $password, $dbname);

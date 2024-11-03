@@ -1,6 +1,6 @@
 <?php
 // Database connection file
-require 'db_connection.php';
+require 'indludes/dbh.inc.php';
 
 if (isset($_POST['submit'])) {
     // Retrieve form data

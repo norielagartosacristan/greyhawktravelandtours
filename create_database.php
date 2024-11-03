@@ -97,6 +97,14 @@ $sql = "CREATE TABLE IF NOT EXISTS admin_users (
      password VARCHAR(255) NOT NULL
 )";
 
+// Create subscribers table
+$sql = "CREATE TABLE IF NOT EXISTS subscibers (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    subscribed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)";
+
+
 
 if ($conn->query($sql) === TRUE) {
     echo "Table 'payments' created successfully<br>";

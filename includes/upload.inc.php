@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "greyhawk_travel_and_tours_db";
+$dbname = "travel_and_tours_db";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
