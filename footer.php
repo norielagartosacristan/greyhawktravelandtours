@@ -4,13 +4,12 @@
     <div class="footer-container">
         <!-- Left Column: Links -->
         <div class="footer-column">
-            <h3>Quick Links</h3>
+            <h3>Important Links</h3>
             <ul>
                 <li><a href="#">Privacy Policy</a></li>
                 <li><a href="#">Cookies Policy</a></li>
                 <li><a href="#">Terms & Condition</a></li>
                 <li><a href="#">Contact</a></li>
-                <li><a href="#">FAQs</a></li>
             </ul>
         </div>
 

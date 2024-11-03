@@ -42,7 +42,7 @@ $result = mysqli_query($conn, $query);
             <div class="destinations-grid">
                 <div class="destination-card">
                     <div class="card-content">
-                        <h3 class="card-title">Destination 1</h3>
+                        <h3 class="card-title">Palawan</h3>
                         <p class="card-description">Explore the beautiful Legazpi</p>
                     </div>
                 </div>
