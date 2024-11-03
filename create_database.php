@@ -89,6 +89,15 @@ $sql = "CREATE TABLE IF NOT EXISTS payments (
     FOREIGN KEY (booking_id) REFERENCES bookings(id) ON DELETE CASCADE
 )";
 
+// Create users table
+$sql = "CREATE TABLE IF NOT EXISTS admin_users (
+     id INT AUTO_INCREMENT PRIMARY KEY,
+     username VARCHAR(50) NOT NULL UNIQUE,
+     email VARCHAR(100) NOT NULL UNIQUE,
+     password VARCHAR(255) NOT NULL
+)";
+
+
 if ($conn->query($sql) === TRUE) {
     echo "Table 'payments' created successfully<br>";
 } else {
