@@ -85,7 +85,7 @@ footer {
     height: auto;
 }
 
-/* Style for Popular Destiatin Section */
+/* Style for Popular Destiatin Section - start */
 .popular-destinations {
     padding: 40px 20px;
     background-color: #f9f9f9;
@@ -106,34 +106,42 @@ footer {
 }
 
 .destinations-card {
-    background-color: #fff;
+    position: relative;
+    height: 200px;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    text-align: center;
     transition: transform 0.3s;
-    text-align: left;
 }
 
 .destinations-card:hover {
-    transform: translate(-10px);
+    transform: translateY(-10px);
 }
 
-.destinations-card img {
+.destinations-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter:brightness(0.7);
 }
 
 .card-content {
-    padding: 15px;
+    position: relative;
+    z-index: 1;
+    padding: 20px;
 }
 
 .card-title {
-    font-size: 1.4em;
-    margin: 10px 0;
-    color: #333;
+    font-size: 1em;
+    margin: 10px 0 0;
 }
 
-.card-description {
-    font-size: 0.9em;
-    color: #666;
-}
+/* Style for Popular Destiatin Section - end */

@@ -41,37 +41,33 @@ $result = mysqli_query($conn, $query);
             <h2>Popular Destinations</h2>
             <div class="destinations-grid">
                 <div class="destination-card">
-                    <img src="" alt="">
                     <div class="card-content">
-                        <h3 class="card-title">Palawan</h3>
-                        <p class="card-description">Explore the beautiful landscape of palawan</p>
+                        <h3 class="card-title">Destination 1</h3>
+                        <p class="card-description">Explore the beautiful Legazpi</p>
                     </div>
                 </div>
 
                 <div class="destination-card">
-                    <img src="" alt="">
                     <div class="card-content">
-                        <h3 class="card-title">Bohol</h3>
-                        <p class="card-description">Explore the beautiful landscape of palawan</p>
+                        <h3 class="card-title">Destination 2</h3>
+                        <p class="card-description">Explore the beautiful Legazpi</p>
                     </div>
                 </div>
 
                 <div class="destination-card">
-                    <img src="" alt="">
                     <div class="card-content">
-                        <h3 class="card-title">Cebu</h3>
-                        <p class="card-description">Explore the beautiful landscape of palawan</p>
-                    </div>
-                </div>
-
-                <div class="destination-card">
-                    <img src="" alt="">
-                    <div class="card-content">
-                        <h3 class="card-title">Legazpi</h3>
-                        <p class="card-description">Explore the beautiful landscape of palawan</p>
+                        <h3 class="card-title">Destination 3</h3>
+                        <p class="card-description">Explore the beautiful Legazpi</p>
                     </div>
                 </div>
                 
+                <div class="destination-card">
+                    <div class="card-content">
+                        <h3 class="card-title">Destination 4</h3>
+                        <p class="card-description">Explore the beautiful Legazpi</p>
+                    </div>
+                </div>
+                  
             </div>
     </section>
 
