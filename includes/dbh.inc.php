@@ -1,8 +1,8 @@
 <?php
-$host = 'localhost'; // Database host
-$user = 'nsacristan26'; // Database user
-$password = 'NS?Formula@01'; // Database password
-$dbname = 'travel_and_tours_db'; // Database name
+$host = "localhost"; // Database host
+$user = "nsacristan26"; // Database user
+$password = "NS?Formula@01"; // Database password
+$dbname = "travel_and_tours_db"; // Database name
 
 // Create connection
 $conn = mysqli_connect($host, $user, $password, $dbname);
