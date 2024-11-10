@@ -11,8 +11,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Database connection
     $servername = "localhost";
-    $username = "root";
-    $password = "";
+    $username = "nsacristan26";
+    $password = "NS?Formula@01";
     $dbname = "travel_and_tours_db";
 
     // Create connection
