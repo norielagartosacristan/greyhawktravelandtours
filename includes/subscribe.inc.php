@@ -1,7 +1,12 @@
 <?php
-// Check if the form is submitted
+// Enable error reporting for debugging
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+// Check if the form was submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Retrieve email from the form and sanitize it
+    // Retrieve and sanitize email
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 
     // Validate email format
@@ -9,29 +14,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die('Invalid email format.');
     }
 
-    // Database connection
+    // Database connection details
     $servername = "localhost";
-    $username = "nsacristan26";
-    $password = "NS?Formula@01";
-    $dbname = "travel_and_tours_db";
+    $username = "greyhlfr_nsacristan26";
+    $password = "Formula@01";
+    $dbname = "greyhlfr_travel_and_tours_db";
 
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
 
-    // Check connecion
+    // Check connection
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    // Insert email into subscribers table
-    $sql = "INSERT INTO subscribers (email) VALUES ('$email')";
+    // Insert email into the subscribers table
+    $stmt = $conn->prepare("INSERT INTO subscribers (email) VALUES (?)");
+    $stmt->bind_param("s", $email);
 
-    if ($conn->query($sql) === TRUE) {
-        echo "Thank you fo subscribing!";
+    if ($stmt->execute()) {
+        echo "Thank you for subscribing!";
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $stmt->error;
     }
 
-    // Close connection
+    // Close the prepared statement and connection
+    $stmt->close();
     $conn->close();
 }
+?>

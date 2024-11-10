@@ -19,13 +19,12 @@
         <!-- Center Column: Social Media Icons -->
         <div class="footer-column social-media">
             <div id="newsletter" class="container mt-5 mb-5">
-            <form action="includes/subscribe.inc.php" method="POST">
-                <div class="form-group">
-                    <label class="subscribe" for="">Subscribe to Our News Letter</label>
-                    <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
-                </div>
-                <button type="submit" class="btn btn-primary">Subscribe</button>
-            </form>
+            <h2>Subscribe to our Newsletter</h2>
+                <form action="includes/subscribe.inc.php" method="POST">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
             </div>
             <h3>Follow Us</h3>
             <a href="https://www.facebook.com/greyhawktravelandtours"><i class="fab fa-facebook-f"></i></a>
@@ -44,6 +43,84 @@
         </div>
     </div>
 </footer>
+
+<?php
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Retrieve email from the form and sanitize it
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+
+    // Validate email format
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        die('Invalid email format.');
+    }
+
+    // Database connection
+    $servername = "localhost";
+    $username = "greyhlfr_nsacristan26";
+    $password = "Formula@01";
+    $dbname = "greyhlfr_travel_and_tours_db";
+
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    // Insert email into subscribers table
+    $sql = "INSERT INTO subscribers (email) VALUES ('$email')";
+
+    if ($conn->query($sql) === TRUE) {
+        $message = "Thank you for subscribing!";
+        $showModal = true;
+    } else {
+        $message = "Error: " . $conn->error;
+        $showModal = true;
+    }
+
+    // Close connection
+    $conn->close();
+}
+?>
+
+<!-- Success Message Modal -->
+<?php if (isset($showModal) && $showModal): ?>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p><?php echo $message; ?></p>
+        </div>
+    </div>
+<?php endif; ?>
+
+<script>
+// Get the modal
+var modal = document.getElementById("modal");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// Show the modal if it should be displayed
+window.onload = function() {
+    <?php if (isset($showModal) && $showModal): ?>
+        modal.style.display = "block";
+    <?php endif; ?>
+};
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
 
 
 
