@@ -10,7 +10,7 @@ if (isset($_POST['submit'])) {
     $departure_date = $conn->real_escape_string($_POST['departure_date']);
 
     // Handle image upload
-    $target_dir = "uploads/";
+    $target_dir = "uploads/images";
     $image_name = basename($_FILES["image"]["name"]);
     $target_file = $target_dir . $image_name;
     $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
