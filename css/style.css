@@ -1,4 +1,10 @@
 /* Basic Footer Styling */
+.navbar-brand img {
+    height: 40px; /* Adjust the logo size */
+    width: auto;
+}
+
+
 footer {
     background-color: #333;
     color: white;
@@ -192,4 +198,13 @@ footer {
     font-size: 18px;
     color: #28a745;
     font-weight: bold;
+}
+
+/* Styel for the banner */
+.jumbotron.bg-primary {
+    background-image: url('images/banner.jpg'); /* Path to your image */
+    background-size: cover;  /* Ensures the image covers the entire section */
+    background-position: center center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+    color: #fff; /* Keeps the text color white */
 }
