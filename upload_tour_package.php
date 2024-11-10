@@ -8,7 +8,7 @@
 <body>
 
 <h2>Upload New Tour Package</h2>
-<form action="upload_tour_package.php" method="post" enctype="multipart/form-data">
+<form action="includes/upload_tour_package.inc.php" method="post" enctype="multipart/form-data">
     <label for="package_name">Package Name:</label>
     <input type="text" name="package_name" id="package_name" required><br><br>
 
