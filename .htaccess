@@ -1,0 +1,20 @@
+
+# Enable URL Rewriting
+RewriteEngine On
+
+# Remove .php extension from URLs
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)$ $1.php [L]
+
+# Redirect non-www to www (or vice versa)
+RewriteCond %{HTTP_HOST} ^example.com [NC]
+RewriteRule ^(.*)$ http://greyhawktravel.com/$1 [L,R=301]
+
+# Enable GZIP compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain text/html text/xml text/css application/x-javascript application/javascript
+</IfModule>
+
+# Set a custom 404 error page
+ErrorDocument 404 /404.html

@@ -44,7 +44,13 @@
     </div>
 </footer>
 
-<?php
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 Greyhawk Travel and Tours | All rights reserved.</p>
+</footer>
+
+
+    <?php
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve email from the form and sanitize it
@@ -121,14 +127,6 @@ window.onclick = function(event) {
     }
 }
 </script>
-
-
-
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2024 Greyhawk Travel and Tours | All rights reserved.</p>
-    </footer>
 
     <!-- Bootstrap and JS Scripts -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
