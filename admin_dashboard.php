@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['admin'])) {
-    header("Location: admin.php");
+    header("Location: login.php");
     exit();
 }
 ?>
@@ -16,7 +16,7 @@ if (!isset($_SESSION['admin'])) {
 <body>
     <h1>Welcome, <?php echo $_SESSION['admin']; ?>!</h1>
     <nav>
-        <a href="upload_package.php">Upload Tour Package</a> | 
+        <a href="upload_tour_package.php">Upload Tour Package</a> | 
         <a href="view_packages.php">View Tour Packages</a> | 
         <a href="logout.php">Logout</a>
     </nav>

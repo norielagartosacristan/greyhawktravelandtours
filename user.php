@@ -7,7 +7,7 @@ $email = 'nlsacristan77@gmail.com';
 
 $stmt = $conn->prepare("INSERT INTO admin_users (username, password, email) VALUES (?, ?, ?)");
 if (!$stmt) {
-    die("Prepare failed: (" . $conn->errno . ") " . $conn->error);
+    die("Prepare failed: (" . $conn->error . ") " . $conn->error);
 }
 
 $stmt->bind_param("sss", $username, $password, $email);

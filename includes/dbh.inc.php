@@ -1,7 +1,7 @@
 <?php
 $host = "localhost"; // Database host
-$user = "nsacristan26"; // Database user
-$password = "NS?Formula@01"; // Database password
+$user = "root"; // Database user
+$password = ""; // Database password
 $dbname = "travel_and_tours_db"; // Database name
 
 // Create connection
