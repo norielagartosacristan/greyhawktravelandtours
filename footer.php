@@ -21,7 +21,7 @@
             <div id="newsletter" class="container mt-5 mb-5">
             <h2>Subscribe to our Newsletter</h2>
                 <form action="includes/subscribe.inc.php" method="POST">
-                    <label for="email">Email:</label>
+                    <label for="email"></label>
                     <input type="email" id="email" name="email" placeholder="Enter your email" required>
                     <button type="submit">Subscribe</button>
                 </form>

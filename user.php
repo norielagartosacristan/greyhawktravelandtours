@@ -5,7 +5,7 @@ $username = 'admin';
 $password = password_hash('NS?Formula@01', PASSWORD_DEFAULT);
 $email = 'nlsacristan77@gmail.com';
 
-$stmt = $conn->prepare("INSERT INTO admin_users (username, password, email) VALUES (?, ?, ?)");
+$stmt = $conn->prepare("INSERT INTO admin_users (username, password, email, user_role) VALUES (?, ?, ?)");
 if (!$stmt) {
     die("Prepare failed: (" . $conn->error . ") " . $conn->error);
 }
