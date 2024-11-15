@@ -208,3 +208,88 @@ footer {
     background-attachment: fixed; /* Keeps the background fixed while scrolling */
     color: #fff; /* Keeps the text color white */
 }
+
+/* Style for the privacy policy */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+.header {
+    background: #0073e6;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.header p {
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
+/* Intro Section */
+.intro {
+    margin-bottom: 20px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-left: 5px solid #0073e6;
+}
+
+.intro p {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 20px;
+}
+
+section h2 {
+    color: #0073e6;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+section ul {
+    list-style-type: disc;
+    margin: 10px 0 10px 20px;
+    padding: 0;
+}
+
+section ul li {
+    margin-bottom: 10px;
+}
+
+/* Footer Styles */
+.footer {
+    background: #f4f4f4;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.footer p {
+    margin: 0;
+    color: #555;
+}

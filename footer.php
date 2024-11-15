@@ -9,10 +9,10 @@
         <div class="footer-column">
             <h3>Important Links</h3>
             <ul>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Cookies Policy</a></li>
-                <li><a href="#">Terms & Condition</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="privacy_policy.php">Privacy Policy</a></li>
+                <li><a href="cookie-policy.php">Cookies Policy</a></li>
+                <li><a href="terms-condition.php">Terms & Condition</a></li>
+                <li><a href="contact_us.php">Contact Us</a></li>
             </ul>
         </div>
 
