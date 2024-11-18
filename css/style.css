@@ -4,153 +4,55 @@
     width: auto;
 }
 
-
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.footer-column {
-    flex: 1;
-    padding: 10px;
-    text-align: left;
-}
-
-.footer-column h3 {
-    margin-bottom: 10px;
-    font-size: 18px;
-    color: #ffcc00;
-}
-
-.footer-column ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.footer-column ul li {
-    margin-bottom: 5px;
-}
-
-.footer-column ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-.footer-column ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Social Media Icons */
-.social-media a img {
-    width: 30px;
-    height: 30px;
-    margin: 0 10px;
-    transition: opacity 0.3s ease;
-}
-
-.social-media a img:hover {
-    opacity: 0.7;
-}
-
-.subscribe {
-    color: #ffcc00;
-    font-weight: 650;
-    font-size: 18px;
-}
-
-.form-group {
-    width: 75%;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-column {
-        margin-bottom: 20px;
-    }
-}
-
 .img {
     max-width: 100%;
     height: auto;
 }
 
-/* Style for Popular Destiatin Section - start */
-.popular-destinations {
-    padding: 40px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
+/* Style for the banner */
+.custom-bg {
+    position: relative; /* Enable positioning for the overlay */
+    background-image: url('../images/mayon-vulcano.jpg'); /* Replace with your image URL */
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 80vh; /* Adjust height to your preference */
+    display: flex;
+    align-items: center; /* Vertically centers content */
+    justify-content: center; /* Horizontally centers content */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Optional: Add shadow for better text visibility */
+    color: white;
 }
 
-.popular-destinations h2 {
-    font-size: 2em;
-    margin-bottom: px;
-    color: #333;
-}
-
-.destinations-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
-
-.destinations-card {
-    position: relative;
-    height: 200px;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: #fff;
-    text-align: center;
-    transition: transform 0.3s;
-}
-
-.destinations-card:hover {
-    transform: translateY(-10px);
-}
-
-.destinations-card::before {
-    content: "";
+.dark-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter:brightness(0.7);
-}
-
-.card-content {
-    position: relative;
+    background-color: rgba(0, 0, 0, 0.8); /* Adjust the opacity to make it darker or lighter */
     z-index: 1;
-    padding: 20px;
 }
 
-.card-title {
-    font-size: 1em;
-    margin: 10px 0 0;
+.custom-bg .container {
+    position: relative;
+    z-index: 2; /* Ensure the text is above the overlay */
 }
 
-/* Style for Popular Destiatin Section - end */
+/* Responsive adjustments (optional) */
+@media (max-width: 768px) {
+    .custom-bg {
+        height: 60vh; /* Adjust height for smaller screens */
+    }
+    .custom-bg h1 {
+        font-size: 1.8rem; /* Adjust font size for smaller screens */
+    }
+    .custom-bg p {
+        font-size: 1rem;
+    }
+}
+
+/* Style for the banner */
 
 /* Style for Modal */
 .modal {
@@ -208,6 +110,7 @@ footer {
     background-attachment: fixed; /* Keeps the background fixed while scrolling */
     color: #fff; /* Keeps the text color white */
 }
+
 
 /* Style for the privacy policy */
 
@@ -292,4 +195,80 @@ section ul li {
 .footer p {
     margin: 0;
     color: #555;
+}
+/* Style for privacy policy - end */
+
+/* Grid layout for multiple cards */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+/* Card styling */
+.destination-card {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: scale(1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.destination-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Image container */
+.image-container {
+    height: 200px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.destination-card:hover .image-container img {
+    transform: scale(1.1);
+}
+
+/* Destination info */
+.destination-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.destination-info h3 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.destination-info p {
+    margin: 0 0 15px;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.learn-more {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more:hover {
+    background-color: #0056b3;
 }

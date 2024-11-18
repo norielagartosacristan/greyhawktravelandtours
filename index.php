@@ -9,7 +9,7 @@ $result = mysqli_query($conn, $query);
 ?>
 
     <!-- Banner Section -->
-    <div class="jumbotron jumbotron-fluid text-white bg-primary">
+    <div class="jumbotron jumbotron-fluid text-white custom-bg">
         <div class="container">
             <h1 class="display-4">Explore the World with Greyhawk</h1>
             <p class="lead">Discover exciting destinations and personalized tour packages just for you!</p>
@@ -17,7 +17,7 @@ $result = mysqli_query($conn, $query);
         </div>
     </div>
 
-    <!-- Featured Tour Packages -->
+    <!-- Featured Tour Packages 
     <div class="container mt-5">
         <h2 class="text-center">Featured Tour Packages</h2>
         <div class="row">
@@ -36,39 +36,66 @@ $result = mysqli_query($conn, $query);
             <?php endwhile; ?>
         </div>
     </div>
+            -->
 
-    <section class="popular-destinations">
-            <h2>Popular Destinations</h2>
-            <div class="destinations-grid">
-                <div class="destination-card">
-                    <div class="card-content">
-                        <h3 class="card-title">Palawan</h3>
-                        <p class="card-description">Explore the beautiful Legazpi</p>
-                    </div>
-                </div>
+<div class="city-grid">
+    <div class="city-image">
 
-                <div class="destination-card">
-                    <div class="card-content">
-                        <h3 class="card-title">Destination 2</h3>
-                        <p class="card-description">Explore the beautiful Legazpi</p>
-                    </div>
-                </div>
+    </div>
+    <div class="city-info">
+         <h2>Cebu City</h2>    
+    </div>
+</div>
 
-                <div class="destination-card">
-                    <div class="card-content">
-                        <h3 class="card-title">Destination 3</h3>
-                        <p class="card-description">Explore the beautiful Legazpi</p>
-                    </div>
-                </div>
-                
-                <div class="destination-card">
-                    <div class="card-content">
-                        <h3 class="card-title">Destination 4</h3>
-                        <p class="card-description">Explore the beautiful Legazpi</p>
-                    </div>
-                </div>
-                  
-            </div>
-    </section>
+    <div class="destinations">
+        <h2>Where to go</h2>
+    <div class="card-grid">
+    <div class="destination-card">
+        <div class="image-container">
+            <img src="images/mayon-vulcano.jpg" alt="Bali, Indonesia">
+        </div>
+        <div class="destination-info">
+            <h3>Legazpi, Albay</h3>
+            <p>Explore the beautiful beaches and lush landscapes.</p>
+            <button class="learn-more">Learn More</button>
+        </div>
+    </div>
+
+    <div class="destination-card">
+        <div class="image-container">
+        <img src="images/palawan.jpg" alt="Paris, France">
+        </div>
+        <div class="destination-info">
+            <h3>Puerto Princesa, Palawan</h3>
+            <p>Experience the City of Light and its iconic Eiffel Tower.</p>
+            <button class="learn-more">Learn More</button>
+        </div>
+    </div>
+
+    <div class="destination-card">
+        <div class="image-container">
+            <img src="destination3.jpg" alt="Tokyo, Japan">
+        </div>
+        <div class="destination-info">
+            <h3>Tokyo, Japan</h3>
+            <p>Discover the vibrant culture and advanced technology.</p>
+            <button class="learn-more">Learn More</button>
+        </div>
+    </div>
+
+    <div class="destination-card">
+        <div class="image-container">
+            <img src="destination4.jpg" alt="New York, USA">
+        </div>
+        <div class="destination-info">
+            <h3>New York, USA</h3>
+            <p>Visit the city that never sleeps and its iconic landmarks.</p>
+            <button class="learn-more">Learn More</button>
+        </div>
+    </div>
+</div>
+
+    </div>
+    
 
 <?php include "footer.php"; ?>

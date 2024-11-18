@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greyhawk Travel and Tours</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
@@ -44,7 +45,7 @@
                 <a class="nav-link" href="tour_packages.php">Holiday</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="flightsearch-form.php">Flights</a>
+                <a class="nav-link" href="#">Flights</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Hotels</a>
