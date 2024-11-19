@@ -24,6 +24,14 @@
     color: white;
 }
 
+.text-container {
+    max-width: 650px;
+}
+
+.justify-text {
+    text-align: justify;
+}
+
 .dark-overlay {
     position: absolute;
     top: 0;
