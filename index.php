@@ -32,7 +32,7 @@
         </div>
         <div class="destination-info">
             <h3>Legazpi, Albay</h3>
-            <p>Explore the beautiful beaches and lush landscapes.</p>
+            <p>Discover the breathtaking beauty of Legazpi, Albay, from the majestic Mayon Volcano to its serene beaches and lush landscapes.</p>
             <button class="learn-more">Learn More</button>
         </div>
     </div>
@@ -43,29 +43,29 @@
         </div>
         <div class="destination-info">
             <h3>Puerto Princesa, Palawan</h3>
-            <p>Experience the City of Light and its iconic Eiffel Tower.</p>
+            <p>Experience the tropical paradise of Palawan, with its crystal-clear waters, pristine beaches, and the world-renowned Underground River.</p>
             <button class="learn-more">Learn More</button>
         </div>
     </div>
 
     <div class="destination-card">
         <div class="image-container">
-            <img src="destination3.jpg" alt="Tokyo, Japan">
+            <img src="images/loboc-river.jpg" alt="Tokyo, Japan">
         </div>
         <div class="destination-info">
-            <h3>Tokyo, Japan</h3>
-            <p>Discover the vibrant culture and advanced technology.</p>
+            <h3>Loboc, Bohol</h3>
+            <p>Experience the charm of Bohol, home to the iconic Chocolate Hills, pristine white-sand beaches, and vibrant marine life.</p>
             <button class="learn-more">Learn More</button>
         </div>
     </div>
 
     <div class="destination-card">
         <div class="image-container">
-            <img src="destination4.jpg" alt="New York, USA">
+            <img src="images/cebu.jpg" alt="New York, USA">
         </div>
         <div class="destination-info">
-            <h3>New York, USA</h3>
-            <p>Visit the city that never sleeps and its iconic landmarks.</p>
+            <h3>Cebu, Philippines</h3>
+            <p>Discover the wonders of Cebu, from its historic Magellan's Cross to its stunning beaches, vibrant festivals, and rich cultural heritage.</p>
             <button class="learn-more">Learn More</button>
         </div>
     </div>

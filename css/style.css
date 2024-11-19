@@ -12,7 +12,7 @@
 /* Style for the banner */
 .custom-bg {
     position: relative; /* Enable positioning for the overlay */
-    background-image: url('../images/mayon-vulcano.jpg'); /* Replace with your image URL */
+    background-image: url('../images/bohol.jpg'); /* Replace with your image URL */
     background-size: cover; /* Ensures the image covers the entire div */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
